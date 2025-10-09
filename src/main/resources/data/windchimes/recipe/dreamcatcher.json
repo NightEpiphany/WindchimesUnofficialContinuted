@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": "minecraft:oak_log",
+    "S": "minecraft:string",
+    "#": "minecraft:stick",
+    "X": "minecraft:feather"
+  },
+  "pattern": [
+    "#A#",
+    "SSS",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "windchimes:dreamcatcher"
+  }
+}

@@ -3,6 +3,17 @@
 	"block.windchimes.bamboo_chime": "Бамбукові Вітряні Дзвіночки",
 	"block.windchimes.copper_chime": "Мідні Вітряні Дзвіночки",
 	"subtitles.block.windchimes.chime": "Вітряні Дзвіночки дзвенять",
+	"tooltip.windchimes.bamboo_chime.info": "Можна розміщувати на стелях і стінах",
+	"tooltip.windchimes.dreamcatcher_type.info": "Використовуйте деревину, щоб змінити її зовнішній вигляд",
+	"tooltip.windchimes.dreamcatcher_type.oak": "Дуб",
+	"tooltip.windchimes.dreamcatcher_type.birch": "березова деревина",
+	"tooltip.windchimes.dreamcatcher_type.dark_oak": "темний дуб",
+	"tooltip.windchimes.dreamcatcher_type.acacia": "акація",
+	"tooltip.windchimes.dreamcatcher_type.spruce": "Деревина ялини",
+	"tooltip.windchimes.dreamcatcher_type.jungle": "дерево джунглів",
+	"resourcePack.windchimes.classicFeather": "Класичний матеріал перо",
+	"resourcePack.windchimes.classicFeather.description": "Класичний дубовий ловець снів з оригінального пухового матеріалу",
 	"modmenu.descriptionTranslation.windchimes": "Цей мод додає три вітряних дзвіночків, які гойдаються на вітрі і іноді дзвенять. Зроблено, щоб доповнити ванільну гру. У цього мода немає налаштувань, які можна змінити.",
-	"modmenu.summaryTranslation.windchimes": "Дзвіночки гойдаються на вітрі..."
+	"modmenu.summaryTranslation.windchimes": "Дзвіночки гойдаються на вітрі...",
+	"itemGroup.windchimes.item_tab": "Вітряні Дзвіночки"
 }

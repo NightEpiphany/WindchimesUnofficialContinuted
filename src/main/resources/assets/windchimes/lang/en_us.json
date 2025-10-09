@@ -2,7 +2,22 @@
 	"block.windchimes.iron_chime": "Iron Wind Chime",
 	"block.windchimes.bamboo_chime": "Bamboo Wind Chime",
 	"block.windchimes.copper_chime": "Copper Wind Chime",
+	"block.windchimes.dreamcatcher": "Dreamcatcher",
+	"tooltip.windchimes.bamboo_chime.info": "Placeable on celling & wall",
+	"tooltip.windchimes.dreamcatcher_type.info": "Use log block to change the texture",
+	"tooltip.windchimes.dreamcatcher_type.oak": "Oak",
+	"tooltip.windchimes.dreamcatcher_type.birch": "Birch",
+	"tooltip.windchimes.dreamcatcher_type.dark_oak": "Dark Oak",
+	"tooltip.windchimes.dreamcatcher_type.acacia": "Acacia",
+	"tooltip.windchimes.dreamcatcher_type.spruce": "Spruce",
+	"tooltip.windchimes.dreamcatcher_type.jungle": "Jungle",
+	"tooltip.windchimes.dreamcatcher_type.cherry": "Cherry",
+	"tooltip.windchimes.dreamcatcher_type.pale_oak": "Pale Oak",
+	"tooltip.windchimes.dreamcatcher_type.empty": "EMPTY",
 	"subtitles.block.windchimes.chime": "Wind Chime chimes",
+	"resourcePack.windchimes.classicFeather": "Classic feather texture",
+	"resourcePack.windchimes.classicFeather.description": "The vanilla feather texture for oak dreamcatcher",
 	"modmenu.descriptionTranslation.windchimes": "This mod adds three wind chimes that sway in the wind and occasionally ring. Designed to compliment the vanilla game, this mod has no settings that can be set.",
-	"modmenu.summaryTranslation.windchimes": "Gentle chimes swaying in the wind..."
+	"modmenu.summaryTranslation.windchimes": "Gentle chimes swaying in the wind...",
+	"itemGroup.windchimes.item_tab": "Wind Chimes"
 }

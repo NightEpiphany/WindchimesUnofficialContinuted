@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "windchimes:block/chime_rack",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "windchimes:block/chime_rack",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "windchimes:block/chime_rack"
+    },
+    "facing=west": {
+      "model": "windchimes:block/chime_rack",
+      "y": 90
+    },
+    "facing=up": {
+      "model": "windchimes:block/chime_rack_float"
+    },
+    "facing=down": {
+      "model": "windchimes:block/chime_rack_float"
+    }
+  }
+}

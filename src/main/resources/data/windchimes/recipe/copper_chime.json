@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": "#minecraft:wooden_buttons",
+    "S": "minecraft:string",
+    "#": "minecraft:stick",
+    "X": "minecraft:copper_ingot"
+  },
+  "pattern": [
+    "###",
+    "XSX",
+    "XAX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "windchimes:copper_chime"
+  }
+}

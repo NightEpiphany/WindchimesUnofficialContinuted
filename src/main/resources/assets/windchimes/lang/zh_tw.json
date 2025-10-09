@@ -1,0 +1,23 @@
+{
+	"block.windchimes.iron_chime": "鐵制風鈴",
+	"block.windchimes.bamboo_chime": "竹制風鈴",
+	"block.windchimes.copper_chime": "銅制風鈴",
+	"block.windchimes.dreamcatcher": "捕夢網",
+	"subtitles.block.windchimes.chime": "風鈴",
+	"tooltip.windchimes.bamboo_chime.info": "可放置在天花板和牆面上",
+	"tooltip.windchimes.dreamcatcher_type.info": "使用原木方塊更改其外觀",
+	"tooltip.windchimes.dreamcatcher_type.oak": "橡木制",
+	"tooltip.windchimes.dreamcatcher_type.birch": "白桦木制",
+	"tooltip.windchimes.dreamcatcher_type.dark_oak": "深色橡木制",
+	"tooltip.windchimes.dreamcatcher_type.acacia": "金合歡木制",
+	"tooltip.windchimes.dreamcatcher_type.spruce": "雲杉木制",
+	"tooltip.windchimes.dreamcatcher_type.jungle": "叢林木制",
+	"tooltip.windchimes.dreamcatcher_type.pale_oak": "蒼白橡木制",
+	"tooltip.windchimes.dreamcatcher_type.cherry": "櫻花木制",
+	"tooltip.windchimes.dreamcatcher_type.empty": "空",
+	"resourcePack.windchimes.classicFeather": "羽毛經典材質",
+	"resourcePack.windchimes.classicFeather.description": "經典橡木捕夢網的原版羽毛材質",
+	"modmenu.descriptionTranslation.windchimes": "模組添加了風鈴，共三種，可以在風中搖擺，也可以和玩家互動",
+	"modmenu.summaryTranslation.windchimes": "風鈴在微風的拂動下輕聲細語訴說著往事",
+	"itemGroup.windchimes.item_tab": "風鈴"
+}
