@@ -8,11 +8,8 @@ import com.moigferdsrte.windchimes.refine.utils.WoodType;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.model.*;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.command.ModelCommandRenderer;
@@ -21,12 +18,9 @@ import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.util.math.Vec3d;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Objects;
 
 public class DreamcatcherRenderer implements BlockEntityRenderer<DreamcatcherBlockEntity, DreamcatcherBlockEntityRenderState> {
 

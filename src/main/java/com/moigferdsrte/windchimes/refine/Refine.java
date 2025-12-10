@@ -29,7 +29,6 @@ public class Refine implements ModInitializer {
         ItemReg.init();
         BlockReg.init();
         SoundReg.init();
-        LayerReg.init();
         BlockEntityReg.init();
 
 
