@@ -1,12 +1,5 @@
 package com.moigferdsrte.windchimes.refine;
 
-import com.moigferdsrte.windchimes.compact.ChimeModel;
-import com.moigferdsrte.windchimes.compact.DreamcatcherModel;
-import com.moigferdsrte.windchimes.refine.bamboo.BambooChimeRenderer;
-import com.moigferdsrte.windchimes.refine.bamboo.BambooWallChimeRenderer;
-import com.moigferdsrte.windchimes.refine.copper.CopperChimeRenderer;
-import com.moigferdsrte.windchimes.refine.dreamcatcher.DreamcatcherRenderer;
-import com.moigferdsrte.windchimes.refine.iron.IronChimeRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -16,6 +9,13 @@ import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import com.moigferdsrte.windchimes.compact.ChimeModel;
+import com.moigferdsrte.windchimes.compact.DreamcatcherModel;
+import com.moigferdsrte.windchimes.refine.bamboo.BambooChimeRenderer;
+import com.moigferdsrte.windchimes.refine.bamboo.BambooWallChimeRenderer;
+import com.moigferdsrte.windchimes.refine.copper.CopperChimeRenderer;
+import com.moigferdsrte.windchimes.refine.dreamcatcher.DreamcatcherRenderer;
+import com.moigferdsrte.windchimes.refine.iron.IronChimeRenderer;
 
 public class RefineClient implements ClientModInitializer {
 
@@ -25,6 +25,7 @@ public class RefineClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        LayerReg.init();
 
         BlockEntityRendererFactories.register(BlockEntityReg.BAMBOO, BambooChimeRenderer::new);
         BlockEntityRendererFactories.register(BlockEntityReg.WALL_BAMBOO, BambooWallChimeRenderer::new);
