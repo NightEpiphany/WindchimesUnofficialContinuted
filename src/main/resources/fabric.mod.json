@@ -6,7 +6,7 @@
 	"description": "This mod adds three wind chimes that sway in the wind and occasionally ring. Designed to compliment the vanilla game, this mod has no settings that can be set.",
 	"authors": [
 		"hibiii",
-		"NightEpiphany(moigferdsrte)"
+		"NightEpiphany"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/windchime-unofficial-continued",
@@ -21,15 +21,19 @@
 		],
 		"client": [
 			"com.moigferdsrte.windchimes.refine.RefineClient"
-		]
+		],
+        "modmenu": [
+          "com.moigferdsrte.windchimes.refine.ModmenuEntryPoint"
+        ]
 	},
 	"mixins": [
 		"windchimes.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.10",
+		"minecraft": "~1.21.11",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+      "cloth-config": "*"
 	}
 }

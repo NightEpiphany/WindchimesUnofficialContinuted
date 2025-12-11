@@ -19,5 +19,11 @@
 	"resourcePack.windchimes.classicFeather.description": "The vanilla feather texture for oak dreamcatcher",
 	"modmenu.descriptionTranslation.windchimes": "This mod adds three wind chimes that sway in the wind and occasionally ring. Designed to compliment the vanilla game, this mod has no settings that can be set.",
 	"modmenu.summaryTranslation.windchimes": "Gentle chimes swaying in the wind...",
-	"itemGroup.windchimes.item_tab": "Wind Chimes"
+	"itemGroup.windchimes.item_tab": "Wind Chimes",
+    "text.autoconfig.windchimes.option.enableEXPTotemBonus":"Totem EXP Booming",
+    "text.autoconfig.windchimes.option.enableEXPTotemBonus.@Tooltip":"Totems will be consumed while sleeping with dreamcatcher nearby.\n In exchange for experience",
+    "text.autoconfig.windchimes.option.enableDreamcatcherHeal":"Dreamcatcher Auto Healing",
+    "text.autoconfig.windchimes.option.enableDreamcatcherHeal.@Tooltip":"Dreamcatcher will recover your health to the max while sleeping nearby.",
+  "gamerule.windchimes.exp_given_by_dreamcatcher": "Exp Gicen by Dreamcatcher",
+  "gamerule.windchimes.exp_given_by_dreamcatcher.description": "Amounts of experiences given by Dreamcatcher per sleep."
 }

@@ -4,7 +4,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 
@@ -16,7 +16,7 @@ public class DreamcatcherModel extends Model<DreamcatcherModel.DreamcatcherModel
     private final ModelPart feather_middle;
 
     public DreamcatcherModel(ModelPart root) {
-        super(root, RenderLayer::getEntityCutout);
+        super(root, RenderLayers::entityCutoutNoCull);
         this.holder = root.getChild("holder");
         this.feather_left = root.getChild("feather_left");
         this.feather_right = root.getChild("feather_right");

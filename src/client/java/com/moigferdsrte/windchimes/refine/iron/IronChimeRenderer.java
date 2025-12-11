@@ -8,6 +8,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.command.ModelCommandRenderer;
@@ -46,7 +47,7 @@ public class IronChimeRenderer implements BlockEntityRenderer<IronChimeBlockEnti
     @Override
     public void render(ChimeBlockEntityRenderState state, MatrixStack matrices, OrderedRenderCommandQueue queue, CameraRenderState cameraState) {
         ChimeModel.ChimeModelState modelState = new ChimeModel.ChimeModelState(state.ringTicks, state.strengthDivisor, state.time, state.tickDelta, state.hanging);
-        RenderLayer renderLayer = RenderLayer.getEntityCutout(Identifier.of(Refine.MOD_ID, "textures/entity/chime/iron_chime.png"));
+        RenderLayer renderLayer = RenderLayers.entityCutoutNoCull(Identifier.of(Refine.MOD_ID, "textures/entity/chime/iron_chime.png"));
         this.root.setAngles(modelState);
         matrices.translate(0.5f, 1f, 0.5f);
         queue.submitModel(

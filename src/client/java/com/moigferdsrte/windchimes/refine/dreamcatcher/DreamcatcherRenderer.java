@@ -10,6 +10,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.command.ModelCommandRenderer;
@@ -87,6 +88,6 @@ public class DreamcatcherRenderer implements BlockEntityRenderer<DreamcatcherBlo
 
     public static RenderLayer getBufferType(BlockState state) {
         WoodType woodType = state.get(DreamcatcherBlock.WOOD_TYPE);
-        return RenderLayer.getEntityCutout(Identifier.of(Refine.MOD_ID, "textures/entity/dreamcatcher/" + woodType.asString() +".png"));
+        return RenderLayers.entityCutoutNoCull(Identifier.of(Refine.MOD_ID, "textures/entity/dreamcatcher/" + woodType.asString() +".png"));
     }
 }

@@ -33,9 +33,9 @@ import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.rule.GameRules;
 import net.minecraft.world.tick.ScheduledTickView;
 import org.jetbrains.annotations.Nullable;
 
@@ -62,7 +62,7 @@ public class DreamcatcherBlock extends BlockWithEntity {
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (world instanceof ServerWorld serverWorld
                 && !player.isCreative()
-                && serverWorld.getGameRules().getBoolean(GameRules.DO_TILE_DROPS)
+                && serverWorld.getGameRules().getValue(GameRules.DO_TILE_DROPS)
                 && world.getBlockEntity(pos) instanceof DreamcatcherBlockEntity dreamcatcherBlockEntity) {
             WoodType woodType = state.get(WOOD_TYPE);
             ItemStack itemStack = new ItemStack(this);

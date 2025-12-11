@@ -3,7 +3,7 @@ package com.moigferdsrte.windchimes.compact;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.util.math.MathHelper;
 
 public class ChimeModel extends Model<ChimeModel.ChimeModelState> {
@@ -14,7 +14,7 @@ public class ChimeModel extends Model<ChimeModel.ChimeModelState> {
     private final ModelPart clapper;
 
     public ChimeModel(ModelPart root) {
-        super(root, RenderLayer::getEntityCutout);
+        super(root, RenderLayers::entityCutoutNoCull);
         this.platform = root.getChild("hanger");
         this.rods1 = root.getChild("rod1");
         this.rods2 = root.getChild("rod3");

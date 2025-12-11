@@ -2,12 +2,8 @@ package com.moigferdsrte.windchimes.refine.dreamcatcher;
 
 import com.moigferdsrte.windchimes.refine.BlockEntityReg;
 import com.moigferdsrte.windchimes.refine.Refine;
-import com.moigferdsrte.windchimes.refine.dreamcatcher.component.DataInit;
-import com.moigferdsrte.windchimes.refine.dreamcatcher.component.DreamcatcherComponent;
-import com.moigferdsrte.windchimes.refine.dreamcatcher.component.WoodTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.component.ComponentsAccess;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,7 +15,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -43,13 +38,6 @@ public class DreamcatcherBlockEntity extends BlockEntity {
         this.tickDisplacement = Math.abs(this.pos.getX() + this.pos.getY() + this.pos.getZ()) % 6;
         this.state = state;
     }
-
-//    @Override
-//    protected void readComponents(ComponentsAccess components) {
-//        super.readComponents(components);
-//        List<WoodTypes> list = components.getOrDefault(DataInit.DREAMCATCHER, DreamcatcherComponent.DEFAULT).woodTypes();
-//        list.addFirst(WoodTypes.getFromInt(this.state.get(DreamcatcherBlock.TYPE)));
-//    }
 
     public void ring(boolean isLoud) {
         assert this.world != null;
@@ -89,11 +77,14 @@ public class DreamcatcherBlockEntity extends BlockEntity {
             List<PlayerEntity> list = world.getNonSpectatingEntities(PlayerEntity.class, box);
             for (PlayerEntity playerEntity : list) {
                 if (playerEntity.isSleeping()) {
-                    playerEntity.setHealth(playerEntity.getMaxHealth());
-                    if (playerEntity.getStackInHand(Hand.MAIN_HAND).isOf(Items.TOTEM_OF_UNDYING) && world instanceof ServerWorld serverWorld) {
-                        GameRules.IntRule rule = serverWorld.getGameRules().get(Refine.EXP_BONUS);
-                        if (rule != null) {
-                            playerEntity.addExperience(rule.get());
+                    if (Refine.config.enableDreamcatcherHeal)
+                        playerEntity.setHealth(playerEntity.getMaxHealth());
+                    if (playerEntity.getStackInHand(Hand.MAIN_HAND).isOf(Items.TOTEM_OF_UNDYING)
+                            && Refine.config.enableEXPTotemBonus
+                            && world instanceof ServerWorld serverWorld) {
+                        Integer value = serverWorld.getGameRules().getValue(Refine.EXP_BONUS);
+                        if (value != null) {
+                            playerEntity.addExperience(value);
                         }
                         playerEntity.setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
                         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 5, 1, true, false));
