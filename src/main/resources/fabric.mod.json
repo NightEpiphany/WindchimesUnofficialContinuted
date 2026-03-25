@@ -12,28 +12,21 @@
 		"homepage": "https://modrinth.com/mod/windchime-unofficial-continued",
 		"sources": "https://github.com/NightEpiphany/WindchimesUnofficialContinuted/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/windchimes/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.moigferdsrte.windchimes.refine.Refine"
+			"com.moigferdsrte.windchimes.WindChimes"
 		],
 		"client": [
-			"com.moigferdsrte.windchimes.refine.RefineClient"
-		],
-        "modmenu": [
-          "com.moigferdsrte.windchimes.refine.ModmenuEntryPoint"
-        ]
+			"com.moigferdsrte.windchimes.WindChimesClient"
+		]
 	},
-	"mixins": [
-		"windchimes.mixins.json"
-	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.11",
-		"java": ">=21",
-		"fabric-api": "*",
-      "cloth-config": "*"
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
 	}
 }

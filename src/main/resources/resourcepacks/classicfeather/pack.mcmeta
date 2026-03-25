@@ -1,9 +1,0 @@
-{
-  "pack": {
-    "pack_format": 34,
-    "supported_formats": [34, 999],
-    "description": {
-      "translate": "resourcePack.windchimes.classicFeather.description"
-    }
-  }
-}

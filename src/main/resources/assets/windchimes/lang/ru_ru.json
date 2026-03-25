@@ -2,18 +2,7 @@
 	"block.windchimes.iron_chime": "Железные Ветряные Колокольчики",
 	"block.windchimes.bamboo_chime": "Бамбуковые Ветряные Колокольчики",
 	"block.windchimes.copper_chime": "Медные Ветряные Колокольчики",
-	"block.windchimes.dreamcatcher": "Ловец снов",
-	"subtitles.block.windchimes.chime": "Колокольчики",
 	"tooltip.windchimes.bamboo_chime.info": "Может быть размещен на потолке и стене",
-	"tooltip.windchimes.dreamcatcher_type.info": "Используйте лог-блоки для изменения его внешнего вида",
-	"tooltip.windchimes.dreamcatcher_type.oak": "Дубовая древесина",
-	"tooltip.windchimes.dreamcatcher_type.birch": "Берёзовая древесина",
-	"tooltip.windchimes.dreamcatcher_type.dark_oak": "Древесина тёмного дуба",
-	"tooltip.windchimes.dreamcatcher_type.acacia": "Акациевая древесина",
-	"tooltip.windchimes.dreamcatcher_type.spruce": "Еловая древесина",
-	"tooltip.windchimes.dreamcatcher_type.jungle": "Джунглевая древесина",
 	"subtitles.block.windchimes.chime": "Ветряные Колокольчики звенят",
-	"modmenu.descriptionTranslation.windchimes": "Этот мод добавляет трое ветряных колокольчиков которые качаются на ветру и иногда звенят. Сделано чтобы дополнить ванильную игру, у этого мода нет настроек, которые можно изменить.",
-	"modmenu.summaryTranslation.windchimes": "Колокольчики звенят на ветру...",
 	"itemGroup.windchimes.item_tab": "Колокольчики"
 }
