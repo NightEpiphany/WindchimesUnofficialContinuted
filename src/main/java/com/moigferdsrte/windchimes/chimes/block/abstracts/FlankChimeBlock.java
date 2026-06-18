@@ -99,8 +99,10 @@ public abstract class FlankChimeBlock<E extends FlankChimeBlockEntity> extends B
             @NonNull BlockState neighbourState,
             @NonNull RandomSource random
     ) {
-        if (level.isEmptyBlock(pos.above()) && level.getBlockEntity(pos) instanceof FlankChimeBlockEntity flankChimeBlockEntity) {
-            flankChimeBlockEntity.setRemoved();
+        if (directionToNeighbour == state.getValue(FACING).getOpposite() && !state.canSurvive(level, pos)) {
+            if (level.getBlockEntity(pos) instanceof FlankChimeBlockEntity flankChimeBlockEntity) {
+                flankChimeBlockEntity.setRemoved();
+            }
             return Blocks.AIR.defaultBlockState();
         }
         return super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
@@ -142,22 +144,16 @@ public abstract class FlankChimeBlock<E extends FlankChimeBlockEntity> extends B
 
     @Override
     public @Nullable BlockState getStateForPlacement(@NonNull BlockPlaceContext ctx) {
-        BlockState blockState = this.defaultBlockState();
-        Level level = ctx.getLevel();
-        BlockPos blockPos = ctx.getClickedPos();
-        Direction[] directions = ctx.getNearestLookingDirections();
-
-        for (Direction direction : directions) {
-            if (direction.getAxis().isHorizontal()) {
-                Direction direction2 = direction.getOpposite();
-                blockState = blockState.setValue(FACING, direction2);
-                if (blockState.canSurvive(level, blockPos)) {
-                    return blockState;
-                }
-            }
+        Direction clickedFace = ctx.getClickedFace();
+        if (!clickedFace.getAxis().isHorizontal()) {
+            return null;
         }
 
-        return null;
+        Level level = ctx.getLevel();
+        BlockPos blockPos = ctx.getClickedPos();
+
+        BlockState blockState = this.defaultBlockState().setValue(FACING, clickedFace);
+        return blockState.canSurvive(level, blockPos) ? blockState : null;
     }
 
     @Override

@@ -22,10 +22,13 @@ public class BambooChimeItem extends StandingAndWallBlockItem {
 
     @Override
     protected @Nullable BlockState getPlacementState(@NonNull BlockPlaceContext context) {
-        BlockState wallState = this.wallBlock.getStateForPlacement(context);
-        if (context.getNearestLookingDirection().getAxis() == Direction.Axis.Y)
-            return this.getBlock().defaultBlockState();
-        return wallState;
+        Direction clickedFace = context.getClickedFace();
+        if (clickedFace == Direction.DOWN) {
+            BlockState state = this.getBlock().getStateForPlacement(context);
+            return state != null && state.canSurvive(context.getLevel(), context.getClickedPos()) ? state : null;
+        }
+
+        return clickedFace.getAxis().isHorizontal() ? this.wallBlock.getStateForPlacement(context) : null;
     }
 
     @Override
