@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "windchimes:bamboo_chime"
+        "recipes": ["windchimes:bamboo_chime"]
       },
       "trigger": "minecraft:recipe_unlocked"
     }

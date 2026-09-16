@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "windchimes:iron_chime"
+        "recipes": ["windchimes:iron_chime"]
       },
       "trigger": "minecraft:recipe_unlocked"
     }

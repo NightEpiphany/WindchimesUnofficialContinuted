@@ -31,6 +31,7 @@ public class BambooChimeItem extends StandingAndWallBlockItem {
         return clickedFace.getAxis().isHorizontal() ? this.wallBlock.getStateForPlacement(context) : null;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void appendHoverText(@NonNull ItemStack itemStack, @NonNull TooltipContext context, @NonNull TooltipDisplay display, @NonNull Consumer<Component> builder, @NonNull TooltipFlag tooltipFlag) {
         super.appendHoverText(itemStack, context, display, builder, tooltipFlag);

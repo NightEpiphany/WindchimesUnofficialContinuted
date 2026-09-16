@@ -30,7 +30,7 @@ public interface BlocksRegistry {
                 .sound(SoundType.METAL)
                 .noOcclusion()
                 .instabreak()
-                .pushReaction(PushReaction.DESTROY)
+                .pushReaction(PushReaction.POPPED)
                 .noOcclusion()
                 .strength(3.5F, 6.0F));
 
@@ -39,7 +39,7 @@ public interface BlocksRegistry {
                 .sound(SoundType.COPPER_BULB)
                 .noOcclusion()
                 .instabreak()
-                .pushReaction(PushReaction.DESTROY)
+                .pushReaction(PushReaction.POPPED)
                 .noOcclusion()
                 .strength(3.2F, 5.0F));
 
@@ -48,7 +48,7 @@ public interface BlocksRegistry {
                 .sound(SoundType.BAMBOO)
                 .noOcclusion()
                 .instabreak()
-                .pushReaction(PushReaction.DESTROY)
+                .pushReaction(PushReaction.POPPED)
                 .noOcclusion()
                 .strength(3.0F, 4.0F));
 
@@ -57,7 +57,7 @@ public interface BlocksRegistry {
                 .sound(SoundType.BAMBOO)
                 .noOcclusion()
                 .instabreak()
-                .pushReaction(PushReaction.DESTROY)
+                .pushReaction(PushReaction.POPPED)
                 .noOcclusion()
                 .strength(3.0F, 4.0F));
 

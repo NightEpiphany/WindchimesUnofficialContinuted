@@ -32,12 +32,12 @@ public abstract class CommonChimeRenderer <C extends CommonChimeBlockEntity> imp
     public abstract boolean wall();
 
     @Override
-    public ChimeBlockEntityRenderState createRenderState() {
+    public @NonNull ChimeBlockEntityRenderState createRenderState() {
         return new ChimeBlockEntityRenderState();
     }
 
     @Override
-    public void extractRenderState(C entity, ChimeBlockEntityRenderState state, float partialTicks, @NonNull Vec3 cameraPosition, ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
+    public void extractRenderState(@NonNull C entity, @NonNull ChimeBlockEntityRenderState state, float partialTicks, @NonNull Vec3 cameraPosition, ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
         BlockEntityRenderer.super.extractRenderState(entity, state, partialTicks, cameraPosition, breakProgress);
         state.ringTicks = entity.ringingTicks;
         state.strengthDivisor = entity.strengthDivisor;
@@ -62,8 +62,7 @@ public abstract class CommonChimeRenderer <C extends CommonChimeBlockEntity> imp
                 OverlayTexture.NO_OVERLAY,
                 -1,
                 null,
-                0,
-                null
+                0
         );
     }
 }
